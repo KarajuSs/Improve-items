@@ -1,5 +1,5 @@
  * UWAGA!!!
- * Należy zmodyfikować odpowiednie pliki, które zostały w tym pliku opisane!
+ * Należy zmodyfikować odpowiednie pliki, które zostały tutaj opisane!
  *
  * Modyfikacja nie jest w ostatecznej wersji :) Można ją zmieniać / poprawiać, lecz zostawić autora skryptu.
  * Z góry dzięki za skorzystanie autorskich modyfikacji!!
