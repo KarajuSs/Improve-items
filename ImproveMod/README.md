@@ -11,18 +11,25 @@
 // Ścieżka: src/games/stendhal/server/entity/item/Item.java
 
 Szukamy:
+```
 		entity.addAttribute("autobind", Type.FLAG, (byte) (Definition.HIDDEN | Definition.VOLATILE));
+```
 
 Dodajemy pod:
+```
 		entity.addAttribute("max_improves", Type.INT, Definition.VOLATILE);
 		entity.addAttribute("improve", Type.INT);
-		
+```
+
 Szukamy:
+```
 	public static int getDefaultAttackRate() {
 		return DEFAULT_ATTACK_RATE;
 	}
+```
 
 Dodajemy pod:
+```
 	public int getImproves() {
 		if(has("improve")) {
 			return getInt("improve");
@@ -41,20 +48,23 @@ Dodajemy pod:
 		}
 		return false;
 	}
-
+```
 
 // Ścieżka: src/games/stendhal/server/core/config/ItemsXMLLoader.java
 // Jeśli istenieje zdeklarowana wartość 'condition'
 
 Szukamy:
+```
 		if (qName.equals("status_resist")) {
 			this.resistances.put(attrs.getValue("type"), Double.valueOf(attrs.getValue("value")));
 			this.activeSlots = attrs.getValue("slots");
 		} else {
 			attributes.put(qName, attrs.getValue("value"));
 		}
+```
 
 Zamieniamy na:
+```
 		if (qName.equals("status_resist")) {
 			this.resistances.put(attrs.getValue("type"), Double.valueOf(attrs.getValue("value")));
 			this.activeSlots = attrs.getValue("slots");
@@ -64,14 +74,17 @@ Zamieniamy na:
 		} else {
 			attributes.put(qName, attrs.getValue("value"));
 		}
-
+```
 
 // Jeśli zdeklarowana wartość 'condition' nie istnieje
 
 Szukamy:
+```
 		} else if (qName.equals("attributes")) {
+```
 		
 Zamieniamy całą funkcję JEŻELI na:
+```
 		} else if (qName.equals("attributes")) {
 			attributesTag = true;
 		} else if (attributesTag) {
@@ -100,12 +113,14 @@ Zamieniamy całą funkcję JEŻELI na:
 				}
 			}
 		}
-
+```
 
 // Ścieżka: src/games/stendhal/server/core/engine/transformer/ItemTransformer.java
 
 Szukamy tablicę:
+```
 		final String[] individualAttributes
+```
 
 Dodajemy w tablicy przed "logid": "improve"
 
@@ -113,10 +128,14 @@ Dodajemy w tablicy przed "logid": "improve"
 // Ścieżka: data/conf/items.xsd
 
 Szukamy:
+```
 		<element name="menu" type="Q1:attribute" minOccurs="0"/>
+```
 		
 Dodajemy pod:
+```
 		<element name="max_improves" type="Q1:attribute" minOccurs="0" maxOccurs="1"/>
+```
 
 
 /** Cieszymy się ze skryptu umożliwiającego ulepszanie przedmiotów :) **/
