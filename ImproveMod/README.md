@@ -7,6 +7,7 @@
  * @Author KarajuSs
  
 // Ścieżka: src/games/stendhal/server/entity/item/Item.java
+
 Szukamy:
 ```
 		entity.addAttribute("autobind", Type.FLAG, (byte) (Definition.HIDDEN | Definition.VOLATILE));
@@ -48,7 +49,9 @@ Dodajemy pod:
 ```
 
 // Ścieżka: src/games/stendhal/server/core/config/ItemsXMLLoader.java
+
 // Jeśli istenieje zdeklarowana wartość 'condition'
+
 Szukamy:
 ```
 		if (qName.equals("status_resist")) {
@@ -73,6 +76,7 @@ Zamieniamy na:
 ```
 
 // Jeśli zdeklarowana wartość 'condition' nie istnieje
+
 Szukamy:
 ```
 		} else if (qName.equals("attributes")) {
@@ -111,6 +115,7 @@ Zamieniamy całą funkcję JEŻELI na:
 ```
 
 // Ścieżka: src/games/stendhal/server/core/engine/transformer/ItemTransformer.java
+
 Szukamy tablicę:
 ```
 		final String[] individualAttributes
@@ -120,6 +125,7 @@ Dodajemy w tablicy przed "logid": `"improve"`
 
 
 // Ścieżka: data/conf/items.xsd
+
 Szukamy:
 ```
 		<element name="menu" type="Q1:attribute" minOccurs="0"/>
