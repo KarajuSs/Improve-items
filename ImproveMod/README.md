@@ -131,7 +131,7 @@ Dodajemy pod:
 ```
 
 
-*Cieszymy się ze skryptu umożliwiającego ulepszanie przedmiotów :)*
+**Cieszymy się ze skryptu umożliwiającego ulepszanie przedmiotów :)**
 
 // Mini poradnik jak dodać przedmiot jako możliwy do ulepszenia:
 1. Otwieramy przykładowo plik konfiguracyjny `'armors.xml'`.
